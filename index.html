@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Claude Code - AI-Powered Coding Assistant Report</title>
+    <title>Claude Code Experiment Report - AI-Powered Agentic Coding Assistant</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <style>
@@ -124,6 +124,16 @@
             50% { transform: scale(1.05); }
             100% { transform: scale(1); }
         }
+        
+        @keyframes glow {
+            0% { 
+                box-shadow: 0 8px 25px rgba(255, 107, 53, 0.4), 0 0 20px rgba(255, 107, 53, 0.3);
+            }
+            100% { 
+                box-shadow: 0 12px 35px rgba(255, 107, 53, 0.6), 0 0 30px rgba(255, 107, 53, 0.5);
+            }
+        }
+        
 
         .metrics-grid {
             display: grid;
@@ -692,6 +702,16 @@
             .pricing-table table { min-width: 600px; }
             .cost-table { overflow-x: auto; }
             .cost-table table { min-width: 800px; }
+            /* Mobile responsive for new recommendation section */
+            div[style*="grid-template-columns: 1fr 1fr"] {
+                grid-template-columns: 1fr !important;
+                gap: 20px !important;
+            }
+            /* Mobile responsive for metrics grid within left column */
+            div[style*="grid-template-columns: 1fr 1fr; gap: 15px;"] {
+                grid-template-columns: 1fr !important;
+                gap: 10px !important;
+            }
         }
     </style>
 </head>
@@ -703,38 +723,132 @@
                 <img src="https://i.ibb.co/4gj6BJ84/claude-logo.png" alt="Claude Logo" class="logo">
                 Claude Code
             </h1>
-            <div class="subtitle">Internal AI-Powered Coding Assistant Experiment Report</div>
+            <div class="subtitle">Internal AI-Powered Agentic Coding Assistant Experiment</div>
         </div>
 
         <!-- Overall Recommendation -->
-        <div class="recommendation-badge">
-            <h2>Overall Recommendation: Strong & Valued</h2>
-            <p><strong>HIGHLY RECOMMENDED FOR BROAD ADOPTION</strong></p>
-            <div class="highlight-box">
-                <p>Claude Code represents a transformative tool that delivers exceptional value across the entire software development lifecycle, demonstrating consistent productivity gains and quality improvements that justify immediate organizational adoption.</p>
-                <p style="margin-top: 15px;">Our comprehensive experiment reveals Claude Code as a game-changing AI assistant that fundamentally enhances how developers work. With <strong>100% team recommendation rate</strong> and measurable productivity improvements ranging from <strong>2x to 10x</strong> across different development activities, Claude Code has proven its worth as an essential development tool rather than just a convenience.</p>
+        <div style="background: #fff; padding: 40px; border-radius: 20px; margin: 40px 0; box-shadow: 0 10px 30px rgba(0,0,0,0.1); border: 3px solid #2a5298;">
+            <h2 style="text-align: center; color: #2a5298; margin-bottom: 20px; font-size: 2.5em;">Overall Recommendation: Strategic AI Tool Selection</h2>
+            <div style="text-align: center; margin-bottom: 40px;">
+                <div style="background: linear-gradient(135deg, #ff6b35, #f7931e); color: white; padding: 20px 40px; border-radius: 50px; font-size: 1.4em; font-weight: bold; display: inline-block; box-shadow: 0 8px 25px rgba(255, 107, 53, 0.4); transform: scale(1.02); border: 3px solid #fff; position: relative; animation: glow 2s ease-in-out infinite alternate;">
+                    <i class="fas fa-star" style="margin-right: 10px; color: #fff200;"></i>
+                    HIGHLY RECOMMENDED WITH STRATEGIC IMPLEMENTATION
+                    <i class="fas fa-star" style="margin-left: 10px; color: #fff200;"></i>
+                </div>
+            </div>
+            
+            <p style="text-align: center; font-size: 1.2em; margin-bottom: 40px; color: #495057;">Our comprehensive team experiment reveals two critical decisions for development teams adopting AI-assisted coding:</p>
+            
+            <!-- Two Column Layout -->
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px; margin: 40px 0;">
+                <!-- LLM Selection Column -->
+                <div style="background: linear-gradient(135deg, #e3f2fd, #f8f9fa); padding: 30px; border-radius: 15px; border-left: 5px solid #2196f3;">
+                    <h3 style="color: #1976d2; margin-bottom: 25px; font-size: 1.6em; display: flex; align-items: center; gap: 10px;"><i class="fas fa-brain"></i> For LLM Selection: Choose Anthropic's Models</h3>
+                    <ul style="list-style: none; margin: 0; padding: 0;">
+                        <li style="margin: 15px 0; padding-left: 25px; position: relative; color: #495057; font-size: 1.05em;"><span style="position: absolute; left: 0; color: #28a745; font-weight: bold;">✓</span> <strong>Claude 3.7 Sonnet</strong> and <strong>Claude Sonnet 4</strong> deliver superior coding performance at competitive pricing</li>
+                        <li style="margin: 15px 0; padding-left: 25px; position: relative; color: #495057; font-size: 1.05em;"><span style="position: absolute; left: 0; color: #28a745; font-weight: bold;">✓</span> With <strong>unanimous team endorsement</strong> for Anthropic's LLMs over alternatives</li>
+                        <li style="margin: 15px 0; padding-left: 25px; position: relative; color: #495057; font-size: 1.05em;"><span style="position: absolute; left: 0; color: #28a745; font-weight: bold;">✓</span> Measurable productivity improvements ranging from <strong>2x to 10x</strong> across different development activities</li>
+                    </ul>
+                </div>
+                
+                <!-- Tools Selection Column -->
+                <div style="background: linear-gradient(135deg, #f3e5f5, #f8f9fa); padding: 30px; border-radius: 15px; border-left: 5px solid #9c27b0;">
+                    <h3 style="color: #7b1fa2; margin-bottom: 25px; font-size: 1.6em; display: flex; align-items: center; gap: 10px;"><i class="fas fa-tools"></i> For AI Development Tools: Strategic Tool Selection</h3>
+                    <div style="margin-bottom: 20px;">
+                        <h4 style="color: #6a1b9a; margin-bottom: 10px; font-size: 1.2em;">Daily Development Work:</h4>
+                        <p style="margin: 0; color: #495057; font-size: 1.05em; padding-left: 15px;"><strong>Cursor with Pro/Business subscription</strong> provides the best cost-effectiveness and familiar IDE experience</p>
+                    </div>
+                    <div>
+                        <h4 style="color: #6a1b9a; margin-bottom: 10px; font-size: 1.2em;">Automation & Advanced Tasks:</h4>
+                        <p style="margin: 0; color: #495057; font-size: 1.05em; padding-left: 15px;"><strong>Claude Code</strong> excels at CI/CD integration, automated unit test generation, PR reviews, code analysis, and documentation writing</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Conclusion -->
+            <div style="background: #f8f9fa; padding: 25px; border-radius: 15px; margin-top: 30px; border: 2px solid #e9ecef;">
+                <p style="text-align: center; font-size: 1.15em; margin: 0; color: #495057; line-height: 1.6;">This dual-tool approach has proven its worth as an <strong>essential development strategy</strong> rather than just a convenience, enabling teams to leverage the right tool for the right task while <strong>maximizing ROI on AI coding assistance</strong>.</p>
             </div>
         </div>
 
-        <!-- Experiment Metrics -->
-        <h2 class="section-title"><i class="fas fa-chart-line"></i> Experiment Usage Metrics</h2>
-        <div class="metrics-grid">
-            <div class="metric-card">
-                <div class="metric-number">37</div>
-                <div class="metric-label">Days Experiment</div>
+        <!-- Metrics and Productivity Section -->
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px; margin: 50px 0;">
+            <!-- Left Column: Experiment Usage Metrics -->
+            <div style="background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%); padding: 30px; border-radius: 20px;">
+                <h2 style="color: #2a5298; margin-bottom: 25px; font-size: 1.8em; text-align: center; display: flex; align-items: center; justify-content: center; gap: 10px;">
+                    <i class="fas fa-chart-line"></i> Experiment Usage Metrics
+                </h2>
+                <div style="display: grid; gap: 15px;">
+                    <div class="metric-card" style="padding: 25px; text-align: center; background: white; border-radius: 15px; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
+                        <div style="font-size: 2.5em; font-weight: bold; color: #2a5298; margin-bottom: 8px;">37</div>
+                        <div style="color: #666; font-weight: 600; font-size: 1em;">Days Experiment</div>
+                    </div>
+                    <div class="metric-card" style="padding: 25px; text-align: center; background: white; border-radius: 15px; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
+                        <div style="font-size: 2.5em; font-weight: bold; color: #2a5298; margin-bottom: 8px;">20</div>
+                        <div style="color: #666; font-weight: 600; font-size: 1em;">Team Members</div>
+                    </div>
+                    <div class="metric-card" style="padding: 25px; text-align: center; background: white; border-radius: 15px; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
+                        <div style="font-size: 2.5em; font-weight: bold; color: #2a5298; margin-bottom: 8px;">658.6M</div>
+                        <div style="color: #666; font-weight: 600; font-size: 1em;">Tokens Processed</div>
+                    </div>
+                    <div class="metric-card" style="padding: 25px; text-align: center; background: white; border-radius: 15px; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
+                        <div style="font-size: 2.5em; font-weight: bold; color: #2a5298; margin-bottom: 8px;">100%</div>
+                        <div style="color: #666; font-weight: 600; font-size: 1em;">Team Recommendation Rate</div>
+                    </div>
+                </div>
             </div>
-            <div class="metric-card">
-                <div class="metric-number">20</div>
-                <div class="metric-label">Team Members</div>
+
+            <!-- Right Column: Key Productivity Numbers -->
+            <div style="background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%); padding: 30px; border-radius: 20px;">
+                <h2 style="color: #2a5298; margin-bottom: 25px; font-size: 1.8em; text-align: center; display: flex; align-items: center; justify-content: center; gap: 10px;">
+                    <i class="fas fa-rocket"></i> Key Productivity Numbers
+                </h2>
+                <div style="display: grid; gap: 15px;">
+                    <div style="padding: 25px; text-align: center; background: white; border-radius: 15px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); position: relative; overflow: hidden;">
+                        <div style="position: absolute; bottom: 0; left: 0; height: 4px; width: 40%; background: linear-gradient(90deg, #28a745, #20c997); border-radius: 0 0 15px 15px;"></div>
+                        <div style="font-size: 2.5em; font-weight: bold; color: #2a5298; margin-bottom: 8px;">2x</div>
+                        <div style="color: #666; font-weight: 600; font-size: 1em;">Code Writing Speed</div>
+                    </div>
+                    <div style="padding: 25px; text-align: center; background: white; border-radius: 15px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); position: relative; overflow: hidden;">
+                        <div style="position: absolute; bottom: 0; left: 0; height: 4px; width: 100%; background: linear-gradient(90deg, #28a745, #20c997); border-radius: 0 0 15px 15px;"></div>
+                        <div style="font-size: 2.5em; font-weight: bold; color: #2a5298; margin-bottom: 8px;">10x</div>
+                        <div style="color: #666; font-weight: 600; font-size: 1em;">Testing & Debugging</div>
+                    </div>
+                    <div style="padding: 25px; text-align: center; background: white; border-radius: 15px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); position: relative; overflow: hidden;">
+                        <div style="position: absolute; bottom: 0; left: 0; height: 4px; width: 40%; background: linear-gradient(90deg, #28a745, #20c997); border-radius: 0 0 15px 15px;"></div>
+                        <div style="font-size: 2.5em; font-weight: bold; color: #2a5298; margin-bottom: 8px;">2x</div>
+                        <div style="color: #666; font-weight: 600; font-size: 1em;">Learning & Onboarding</div>
+                    </div>
+                    <div style="padding: 25px; text-align: center; background: white; border-radius: 15px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); position: relative; overflow: hidden;">
+                        <div style="position: absolute; bottom: 0; left: 0; height: 4px; width: 60%; background: linear-gradient(90deg, #28a745, #20c997); border-radius: 0 0 15px 15px;"></div>
+                        <div style="font-size: 2.5em; font-weight: bold; color: #2a5298; margin-bottom: 8px;">33-50%</div>
+                        <div style="color: #666; font-weight: 600; font-size: 1em;">Feature Development Time Savings</div>
+                    </div>
+                    <div style="padding: 25px; text-align: center; background: white; border-radius: 15px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); position: relative; overflow: hidden;">
+                        <div style="position: absolute; bottom: 0; left: 0; height: 4px; width: 100%; background: linear-gradient(90deg, #28a745, #20c997); border-radius: 0 0 15px 15px;"></div>
+                        <div style="font-size: 2.5em; font-weight: bold; color: #2a5298; margin-bottom: 8px;">&lt;10 hrs</div>
+                        <div style="color: #666; font-weight: 600; font-size: 1em;">Greenfield Prototypes</div>
+                    </div>
+                </div>
             </div>
-            <div class="metric-card">
-                <div class="metric-number">658.6M</div>
-                <div class="metric-label">Tokens Processed</div>
+        </div>
+
+        <!-- Why We Chose Anthropic's Models -->
+        <h2 class="section-title"><i class="fas fa-star"></i> Why We Chose Anthropic's Models</h2>
+        
+        <div style="background: #f8f9fa; padding: 30px; border-radius: 15px; margin: 30px 0;">
+            <h3 style="color: #2a5298; margin-bottom: 20px;">Team Members' Comments</h3>
+            <p style="margin-bottom: 20px; font-size: 1.1em;">Our testing confirms that for our development needs, Anthropic's models offer the best combination of performance and value. This was particularly evident in real-world scenarios.</p>
+            
+            <div class="quote">
+                <div class="quote-text">I was impressed by Sonnet 4's ability to manage complex, multi-turn conversations without losing context. Other models I tested struggled after a few interactions, but Sonnet 4 consistently maintained conversational integrity across our codebase.</div>
             </div>
-            <div class="metric-card">
-                <div class="metric-number">100%</div>
-                <div class="metric-label">Team Recommendation</div>
+            
+            <div class="quote">
+                <div class="quote-text">I attempted to refactor a large legacy class in Monoliph using AI, and the models from Anthropic outperformed those from OpenAI and Google. I utilized Sonnet 3.7 and Sonnet 4, and the results were impressive.</div>
             </div>
+            
+            <p style="margin-top: 20px; font-size: 1.1em;">This demonstrated capability, combined with its industry-leading performance on benchmarks like SWE-Bench (72.7%) at a highly competitive price point ($3/$15 per million tokens), makes it the clear and logical choice for enhancing our team's productivity.</p>
         </div>
 
         <!-- LLM Provider Comparison -->
@@ -849,132 +963,53 @@
             </div>
         </div>
 
-        <!-- AI Coding Tool Comparison -->
-        <h2 class="section-title"><i class="fas fa-tools"></i> AI Coding Tool Comparison</h2>
+        <!-- Why We Chose Claude Code + Cursor -->
+        <h2 class="section-title"><i class="fas fa-star"></i> Why We Chose Claude Code + Cursor</h2>
         
-        <div class="comparison-grid">
-            <div class="comparison-card">
-                <h3><span class="scenario-badge">Scenario 1</span></h3>
-                <h4 style="color: #2a5298; margin: 20px 0;">Claude Code + Subscription & PAYG</h4>
-                <p><strong>Price:</strong> Pro: $20/mo; Max: $100-$200/mo + API overage</p>
-                <p><strong>Key Strengths:</strong></p>
-                <ul style="list-style: none; margin: 15px 0;">
-                    <li style="padding: 8px 0;">• Agentic capabilities</li>
-                    <li style="padding: 8px 0;">• Deep codebase analysis</li>
-                    <li style="padding: 8px 0;">• Autonomous task execution</li>
-                </ul>
-                <p><strong>Major Limitations:</strong></p>
-                <ul style="list-style: none; margin: 15px 0;">
-                    <li style="padding: 8px 0;">• Max plan can be costly</li>
-                    <li style="padding: 8px 0;">• CLI-centric approach</li>
-                    <li style="padding: 8px 0;">• Poor image input</li>
-                </ul>
+        <div style="background: #f8f9fa; padding: 30px; border-radius: 15px; margin: 30px 0;">
+            <p style="margin-bottom: 20px; font-size: 1.1em;">Our experiments revealed that no single AI coding tool dominates all use cases; effectiveness depends on the specific development scenario. Based on our findings, Claude Code and the paid version of Cursor emerged as the top choices in the current market.</p>
+            
+            <h3 style="color: #2a5298; margin-bottom: 20px;">Team Members' Comments</h3>
+            
+            <div class="quote">
+                <div class="quote-text">Based on my experiment, Claude Code offers the best coding performance. It can handle longer contexts than other AI IDEs and, with the right setup, proves to be very powerful for complex tasks, automating many processes.</div>
             </div>
-
-            <div class="comparison-card">
-                <h3><span class="scenario-badge">Scenario 2</span></h3>
-                <h4 style="color: #2a5298; margin: 20px 0;">Free Cursor + Anthropic API (PAYG)</h4>
-                <p><strong>Price:</strong> $0 for Cursor + PAYG API costs</p>
-                <p><strong>Key Strengths:</strong></p>
-                <ul style="list-style: none; margin: 15px 0;">
-                    <li style="padding: 8px 0;">• Cursor IDE features</li>
-                    <li style="padding: 8px 0;">• Direct API access</li>
-                    <li style="padding: 8px 0;">• Familiar VS Code UX</li>
-                </ul>
-                <p><strong>Major Limitations:</strong></p>
-                <ul style="list-style: none; margin: 15px 0;">
-                    <li style="padding: 8px 0;">• Risk of high API bills</li>
-                    <li style="padding: 8px 0;">• Limited free tier features</li>
-                    <li style="padding: 8px 0;">• Manual API key management</li>
-                </ul>
+            
+            <div class="quote">
+                <div class="quote-text">Among all the AI coding tools I've tried, Cursor is the easiest to use and most stable. Despite its limitations, it remains the best choice for our daily development work.</div>
             </div>
-
-            <div class="comparison-card">
-                <h3><span class="scenario-badge">Scenario 3</span></h3>
-                <h4 style="color: #2a5298; margin: 20px 0;">Cursor + Subscription (Pro/Business)</h4>
-                <p><strong>Price:</strong> Pro: $20/mo; Business: $40/user/mo</p>
-                <p><strong>Key Strengths:</strong></p>
-                <ul style="list-style: none; margin: 15px 0;">
-                    <li style="padding: 8px 0;">• Highly integrated IDE</li>
-                    <li style="padding: 8px 0;">• Intelligent code refinement</li>
-                    <li style="padding: 8px 0;">• Polished AI-first IDE</li>
-                </ul>
-                <p><strong>Major Limitations:</strong></p>
-                <ul style="list-style: none; margin: 15px 0;">
-                    <li style="padding: 8px 0;">• 500 fast request limit</li>
-                    <li style="padding: 8px 0;">• Slow requests after quota</li>
-                    <li style="padding: 8px 0;">• Max Mode expensive</li>
-                </ul>
-            </div>
-        </div>
-
-        <!-- Monthly Cost Scenarios -->
-        <div class="cost-table">
-            <h3 style="padding: 20px; background: #495057; color: white; margin: 0; text-align: center;">Illustrative Monthly Cost Scenarios (USD)</h3>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Developer Profile</th>
-                        <th>Scenario 1: Claude Code</th>
-                        <th>Scenario 2: Free Cursor + API</th>
-                        <th>Scenario 3: Cursor Subscription</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td><strong>Occasional Coder/Hobbyist</strong><br><small>(~75 interactions/mo)</small></td>
-                        <td>~$20<br><small>Pro sub covers usage</small></td>
-                        <td>~$5 - $15<br><small>Haiku/Sonnet API</small></td>
-                        <td>~$20<br><small>Pro sub covers</small></td>
-                    </tr>
-                    <tr>
-                        <td><strong>Daily Professional Developer</strong><br><small>(~600 interactions/mo)</small></td>
-                        <td>~$20 - $100+<br><small>May need Max</small></td>
-                        <td>~$40 - $150+<br><small>Significant API usage</small></td>
-                        <td>~$20 - $40+<br><small>Pro + overages</small></td>
-                    </tr>
-                    <tr>
-                        <td><strong>AI Power User/Automation</strong><br><small>(1500+ interactions/mo)</small></td>
-                        <td>~$100 - $300+<br><small>Max + PAYG</small></td>
-                        <td>~$150 - $500+<br><small>Heavy API usage</small></td>
-                        <td>~$60 - $200+<br><small>Business + Max Mode</small></td>
-                    </tr>
-                </tbody>
-            </table>
         </div>
 
         <!-- Our Recommendation -->
         <div class="recommendation-section">
             <h2 style="text-align: center; color: #2a5298; margin-bottom: 30px;">Our Recommendation</h2>
-            <p style="text-align: center; font-size: 1.1em; margin-bottom: 30px;">Based on our experiment and detailed comparison, we recommend the following strategic approach:</p>
+            <p style="text-align: center; font-size: 1.1em; margin-bottom: 30px;">We recommend the following strategic approach:</p>
             
             <div class="recommendation-cards">
                 <div class="recommendation-card">
-                    <h4><i class="fas fa-users"></i> For Most Development Teams</h4>
-                    <p><strong>Cursor with Pro/Business Subscription</strong></p>
+                    <h4><i class="fas fa-users"></i> For Daily Development Work: Cursor with Pro/Business Subscription</h4>
                     <ul>
-                        <li>Best cost-effectiveness for accessing Claude models</li>
-                        <li>Lowest learning curve with familiar VS Code interface</li>
-                        <li>Immediate productivity gains with seamless IDE features</li>
-                        <li>Predictable pricing at $20-40/month per developer</li>
+                        <li><strong>Best cost-effectiveness</strong> for accessing Anthropic's Claude models in coding workflows</li>
+                        <li><strong>Lowest learning curve</strong> with familiar VS Code-based interface and intuitive AI integration</li>
+                        <li><strong>Immediate productivity gains</strong> with seamless IDE features like tab-completion and codebase Q&A</li>
+                        <li><strong>Predictable pricing</strong> at $20-40/month per developer with clear usage limits</li>
                     </ul>
                 </div>
                 
                 <div class="recommendation-card">
-                    <h4><i class="fas fa-rocket"></i> For Advanced Users & Power Teams</h4>
-                    <p><strong>Claude Code CLI + Subscription</strong></p>
+                    <h4><i class="fas fa-rocket"></i> For Advanced Usage and Automation: Claude Code CLI + Subscription</h4>
                     <ul>
-                        <li>Superior agentic capabilities and autonomous execution</li>
-                        <li>Advanced automation potential for complex workflows</li>
-                        <li>Direct API access without intermediary markups</li>
-                        <li>Scriptable and extensible for custom workflows</li>
+                        <li><strong>Superior agentic capabilities</strong> including autonomous task execution, deep codebase analysis, and Git operations</li>
+                        <li><strong>Advanced automation potential</strong> for complex workflows, testing, and CI/CD integration</li>
+                        <li><strong>Direct API access</strong> without intermediary markups for high-volume usage</li>
+                        <li><strong>Scriptable and extensible</strong> for custom development workflows and team automation</li>
                     </ul>
                 </div>
             </div>
         </div>
 
         <!-- Pros & Cons -->
-        <h2 class="section-title"><i class="fas fa-list-check"></i> Pros & Cons</h2>
+        <h2 class="section-title"><i class="fas fa-list-check"></i> Pros & Cons of Claude Code</h2>
         <p style="text-align: center; margin-bottom: 40px; font-size: 1.1em;">Claude Code excels in multiple development scenarios, providing substantial productivity gains and enhanced development workflows across the software development lifecycle.</p>
         
         <div class="pros-cons">
@@ -1014,7 +1049,7 @@
                 
                 <div class="category-title">⚠️ Technical Limitations</div>
                 <ul class="feature-list">
-                    <li><strong>Large codebase performance:</strong> Quality decreases with complex dependencies</li>
+                    <li><strong>Large codebase performance:</strong> Performance degrades significantly with complex codebases and dependencies</li>
                     <li><strong>Loop behavior:</strong> Gets stuck in repetitive cycles with ambiguous tasks</li>
                     <li><strong>Over-determination:</strong> Generates incorrect code instead of admitting uncertainty</li>
                 </ul>
@@ -1037,7 +1072,7 @@
         </div>
 
         <!-- Learning Curves -->
-        <h2 class="section-title"><i class="fas fa-graduation-cap"></i> Learning Curves</h2>
+        <h2 class="section-title"><i class="fas fa-graduation-cap"></i> Learning Curves of Claude Code</h2>
         <div class="learning-curve-section">
             <p style="text-align: center; margin-bottom: 30px; font-size: 1.1em;">
                 While Claude Code is a powerful development tool, mastering its capabilities requires dedicated practice and understanding of its unique workflow patterns.
@@ -1047,8 +1082,8 @@
                 <div class="learning-card">
                     <h4><i class="fas fa-cog"></i> Initial Setup & Configuration</h4>
                     <p><strong>Setup complexity</strong> is moderate for developers familiar with NodeJS, npm, and standard CLI tool installations</p>
-                    <p style="margin-top: 10px;"><strong>Initial configuration</strong> appears straightforward, but advanced customization requires manual intervention due to the lack of a graphical interface</p>
-                    <p style="margin-top: 10px;"><strong>Learning investment</strong> is notably higher compared to Cursor, demanding more hands-on experience to achieve proficiency</p>
+                    <p style="margin-top: 10px;"><strong>Initial configuration</strong> appears straightforward, but advanced customization requires manual intervention due to the lack of a graphical interface (e.g., model selection, custom parameters)</p>
+                    <p style="margin-top: 10px;"><strong>Learning investment</strong> is notably higher compared to Cursor, as it demands more hands-on experience to achieve proficiency</p>
                 </div>
                 
                 <div class="learning-card">
@@ -1058,38 +1093,58 @@
                 </div>
             </div>
         </div>
+        
+        <!-- Comprehensive Comparison Matrix -->
+        <h2 class="section-title"><i class="fas fa-table"></i> Comprehensive Comparison Matrix</h2>
+        <div style="background: #f8f9fa; padding: 30px; border-radius: 15px; margin: 30px 0;">
+            <p style="margin-bottom: 20px; font-size: 1.1em;">The following section compares the three main approaches to using Claude for coding:</p>
+            <ol style="margin: 20px 0; padding-left: 30px;">
+                <li><strong>Anthropic's Claude Code</strong>, utilized via its Command Line Interface (CLI) and Integrated Development Environment (IDE) integrations, supported by Anthropic's Pro or Max subscription tiers and supplemented by Pay-As-You-Go (PAYG) API access for extended capabilities.</li>
+                <li><strong>The free tier of the Cursor IDE</strong>, augmented by a direct Pay-As-You-Go (PAYG) Anthropic API key, allows users to leverage Anthropic's models within Cursor's environment at their own API cost.</li>
+                <li><strong>The Cursor IDE is utilized with its native Pro or Business subscription plans</strong>, which bundle AI features and model access.</li>
+            </ol>
+        </div>
+
+        <!-- Monthly Cost Scenarios -->
+        <div class="cost-table">
+            <h3 style="padding: 20px; background: #495057; color: white; margin: 0; text-align: center;">Illustrative Monthly Cost Scenarios (USD)</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Developer Profile</th>
+                        <th>Scenario 1: Claude Code</th>
+                        <th>Scenario 2: Free Cursor + API</th>
+                        <th>Scenario 3: Cursor Subscription</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Occasional Coder/Hobbyist</strong><br><small>(~75 interactions/mo)</small></td>
+                        <td>~$20<br><small>Pro sub covers usage</small></td>
+                        <td>~$5 - $15<br><small>Haiku/Sonnet API</small></td>
+                        <td>~$20<br><small>Pro sub covers</small></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Daily Professional Developer</strong><br><small>(~600 interactions/mo)</small></td>
+                        <td>~$20 - $100+<br><small>May need Max</small></td>
+                        <td>~$40 - $150+<br><small>Significant API usage</small></td>
+                        <td>~$20 - $40+<br><small>Pro + overages</small></td>
+                    </tr>
+                    <tr>
+                        <td><strong>AI Power User/Automation</strong><br><small>(1500+ interactions/mo)</small></td>
+                        <td>~$100 - $300+<br><small>Max + PAYG</small></td>
+                        <td>~$150 - $500+<br><small>Heavy API usage</small></td>
+                        <td>~$60 - $200+<br><small>Business + Max Mode</small></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
 
         <!-- Team Feedback -->
         <h2 class="section-title"><i class="fas fa-users"></i> Team Members' Feedback</h2>
-        
-        <div class="productivity-section">
-            <h3 style="color: #2a5298; margin-bottom: 30px; font-size: 1.8em; text-align: center;">Key Productivity Numbers</h3>
-            <div class="productivity-stats">
-                <div class="stat-bar speed-2x">
-                    <div class="stat-number">2x</div>
-                    <div class="stat-label">Code Writing Speed</div>
-                </div>
-                <div class="stat-bar speed-10x">
-                    <div class="stat-number">10x</div>
-                    <div class="stat-label">Testing & Debugging</div>
-                </div>
-                <div class="stat-bar speed-2x">
-                    <div class="stat-number">2x</div>
-                    <div class="stat-label">Learning & Onboarding</div>
-                </div>
-                <div class="stat-bar speed-33">
-                    <div class="stat-number">33-50%</div>
-                    <div class="stat-label">Time Savings</div>
-                </div>
-                <div class="stat-bar speed-10x">
-                    <div class="stat-number">~10 hrs</div>
-                    <div class="stat-label">Greenfield Prototypes</div>
-                </div>
-            </div>
-        </div>
 
         <div class="quotes-container">
-            <h3 style="color: #17a2b8; margin-bottom: 30px; font-size: 1.8em;"><i class="fas fa-comments"></i> Comments</h3>
+            <h3 style="color: #17a2b8; margin-bottom: 30px; font-size: 1.8em;"><i class="fas fa-comments"></i> Team Members' Feedback</h3>
             <div class="quote">
                 <div class="quote-text">Claude Code and most of AI tools we have now are the excellent tooling for us as developers, it helps a lot in productivity for enhance our ability to do more and do faster</div>
             </div>
@@ -1126,7 +1181,7 @@
         <div class="protips-section">
             <h3><i class="fas fa-lightbulb"></i> Protips</h3>
             <div class="protip">
-                Instead of asking Claude Code to accomplish a big complex task with ambiguous instructions, divide the big task into smaller ones with clear instructions, the final result will be much better.
+                Instead of asking Claude Code to accomplish a big complex task with ambiguous instructions, devide the big task into smaller ones with clear instructions, the final result will be much better.
             </div>
             <div class="protip">
                 Setup the coding rules of each project for Claude Code at the beginning, this will help Claude Code to understand the project and to generate code that is more consistent with the project.
